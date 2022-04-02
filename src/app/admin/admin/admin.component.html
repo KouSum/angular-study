@@ -1,0 +1,9 @@
+<h2>Admin</h2>
+<button (click)="logout()">logout</button>
+<nav>
+    <a routerLink="./" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Dashboard</a>
+    <a routerLink="./crises" routerLinkActive="active">Manage Crises</a>
+    <a routerLink="./heroes" routerLinkActive="active">Manage Heroes</a>
+</nav>
+<app-my-props-test [testName]="'bob'" (testEvent)="myAlert($event)"></app-my-props-test>
+<router-outlet></router-outlet>

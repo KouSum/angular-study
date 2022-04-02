@@ -1,0 +1,26 @@
+li{
+    cursor: pointer;
+    padding: 10px 10px 10px 0;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #eee;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+        text-decoration: none;
+    }
+}
+.badge{
+    background-color: rgb(75, 75, 75);
+    margin-right: 10px;
+    padding: 10px;
+    color: white;
+}
+.heroes{
+    list-style-type: none;
+}
+.selected{
+    background-color: rgb(177, 226, 210);
+}

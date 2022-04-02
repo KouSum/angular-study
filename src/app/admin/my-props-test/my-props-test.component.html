@@ -1,0 +1,15 @@
+<p>my-props-test works!{{testName}}</p>
+<p>testValue1：{{testValue1}}</p>
+
+<input #ref1 type="text" [(ngModel)]="firstExample" />
+
+<span>Value: {{ ref1.value }}</span>
+
+<!-- New template -->
+<ng-template [ngIf]="true">
+  <!-- Because the context is inherited, the value is available to the new template -->
+  <span>Value: {{ ref1.value }}</span>
+</ng-template>
+<a class="a" ngClass="s" #refA>123</a>
+<app-manage-heroes #refComp></app-manage-heroes>
+<button (click)="buttonClick($event, refA, refComp)">button</button>
