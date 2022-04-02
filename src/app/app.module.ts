@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormControlDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeroDetailsComponent } from './hero-details/hero-details.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -25,6 +25,8 @@ import { CrisisCenterComponent } from './crisis-center/crisis-center/crisis-cent
 import { CrisisCenterModule } from './crisis-center/crisis-center.module';
 import { CrisisCenterHomeComponent } from './crisis-center/crisis-center-home/crisis-center-home.component';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { MyFormModule } from './my-form/my-form.module';
+import { NameEditorComponent } from './name-editor/name-editor.component';
 
 @NgModule({
   declarations: [
@@ -37,14 +39,17 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
     LoginComponent,
     CrisisCenterComponent,
     CrisisCenterHomeComponent,
-    ComposeMessageComponent
+    ComposeMessageComponent,
+    NameEditorComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     FormsModule,
     AuthModule,
     AdminModule,
+    MyFormModule,
     CrisisCenterModule,
     AppRoutingModule,
     HttpClientModule,
