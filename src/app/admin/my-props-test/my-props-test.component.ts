@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import { ManageHeroesComponent } from '../manage-heroes/manage-heroes.component';
 import { TestValueService } from '../test-value.service';
 
@@ -17,6 +17,10 @@ export class MyPropsTestComponent implements OnInit {
   firstExample = '';
   testValue1 = ''
 
+  // 通过 ElementRef 我们就可以封装不同平台下视图层中的 native 元素
+  @ViewChild('greet')
+  greetDiv: ElementRef | undefined;
+
   ngOnInit(): void {
     // 调用父组件的方法
     this.testEvent.emit('nihao')
@@ -25,6 +29,7 @@ export class MyPropsTestComponent implements OnInit {
   }
 
   buttonClick(e:MouseEvent,ref: HTMLAnchorElement, refComp: ManageHeroesComponent){
+    console.log(this.greetDiv?.nativeElement)
     this.testValue.setValue('v2')
     this.testValue1 = this.testValue.myValue1
     // 调用其他子组件的方法

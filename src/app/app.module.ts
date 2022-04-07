@@ -27,6 +27,11 @@ import { CrisisCenterHomeComponent } from './crisis-center/crisis-center-home/cr
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { MyFormModule } from './my-form/my-form.module';
 import { NameEditorComponent } from './name-editor/name-editor.component';
+import { HeroFormComponent } from './hero-form/hero-form/hero-form.component';
+import {HeroFormModule} from "./hero-form/hero-form.module";
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import {MyPipeModule} from "./my-pipe/my-pipe.module";
+import {NewAppModule} from "./new-app/new-app.module";
 
 @NgModule({
   declarations: [
@@ -40,7 +45,9 @@ import { NameEditorComponent } from './name-editor/name-editor.component';
     CrisisCenterComponent,
     CrisisCenterHomeComponent,
     ComposeMessageComponent,
-    NameEditorComponent
+    NameEditorComponent,
+    HeroFormComponent,
+    ProfileEditorComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +56,10 @@ import { NameEditorComponent } from './name-editor/name-editor.component';
     FormsModule,
     AuthModule,
     AdminModule,
+    MyPipeModule,
     MyFormModule,
+    HeroFormModule,
+    NewAppModule,
     CrisisCenterModule,
     AppRoutingModule,
     HttpClientModule,

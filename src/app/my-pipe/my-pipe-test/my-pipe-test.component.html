@@ -1,0 +1,68 @@
+<p>my-pipe-test works!</p>
+<div>
+  {{ birthday | date | uppercase }}
+</div>
+<div>
+  {{ amount | currency:'EUR' }}
+</div>
+<div>
+  <p>The hero's birthday is {{ birthday | date:format }}</p>
+</div>
+<div>
+  <button (click)="toggleFormat()">Toggle Format</button>
+</div>
+<div>
+  <p>Super power boost: {{2 | exponentialStrength: 10}}</p>
+</div>
+
+
+<div>
+  <h2>Power Boost Calculator</h2>
+  <label for="power-input">Normal power: </label>
+  <input id="power-input" type="text" [(ngModel)]="power">
+  <label for="boost-input">Boost factor: </label>
+  <input id="boost-input" type="text" [(ngModel)]="factor">
+  <p>
+    Super Hero Power: {{power | exponentialStrength: factor}}
+  </p>
+</div>
+
+
+<div>
+  <label for="hero-name">New hero name: </label>
+  <input type="text" #box
+         id="hero-name"
+         (keyup.enter)="addHero(box.value); box.value=''"
+         placeholder="hero name">
+  <button (click)="reset()">Reset list of heroes</button>
+<!--  <div *ngFor="let hero of heroes">-->
+<!--    {{hero.name}}-->
+<!--  </div>-->
+</div>
+
+
+
+<div>
+  <div *ngFor="let hero of (heroes | flyingHeroesImpure)">
+    {{hero.name}}
+  </div>
+</div>
+
+
+<h2>Async Hero Message and AsyncPipe</h2>
+<p>Message: {{ message$ | async }}</p>
+<button (click)="resend()">Resend</button>
+
+
+
+<div>
+  <h2>Heroes from JSON File</h2>
+
+  <div *ngFor="let hero of ('assets/heroes.json' | fetchJson) ">
+    {{hero.name}}
+  </div>
+
+  <p>Heroes as JSON:
+    {{'assets/heroes.json' | fetchJson | json}}
+  </p>
+</div>

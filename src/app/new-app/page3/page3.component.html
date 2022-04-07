@@ -1,0 +1,16 @@
+<p>page3 works!</p>
+<button (click)="back()">go back</button>
+
+<li *ngFor="let hero of obs$ | async">
+  {{hero}}
+</li>
+<div>
+  <button (click)="clickTest()">防抖</button>
+</div>
+
+<li *ngFor="let hero of obs2$ | async">
+  {{hero}}
+</li>
+<div>
+  <button (click)="clickTest2()">节流</button>
+</div>

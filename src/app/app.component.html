@@ -1,9 +1,16 @@
 <h1>{{title}}</h1>
-<app-name-editor></app-name-editor>
+<div>
+  {{ birthday | date }}
+</div>
+<!--<app-hero-form></app-hero-form>-->
+<!--<app-name-editor></app-name-editor>-->
 <nav>
   <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
   <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
   <a routerLink="/admin" routerLinkActive="active">Admin</a>
+  <a routerLink="/profile" routerLinkActive="active">profile</a>
+  <a routerLink="/pipe_test" routerLinkActive="active">pipe_test</a>
+  <a routerLink="/lin" routerLinkActive="active">lin</a>
   <a [routerLink]="[{outlets: { popup: ['compose']}}]">Contact</a>
 </nav>
 <div [@routeAnimation]="getAnimationData(routerOutlet)">

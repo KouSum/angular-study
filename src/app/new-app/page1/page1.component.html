@@ -1,0 +1,8 @@
+<p>page1 works!</p>
+
+<div>
+  <button (click)="goto('/page2',[2], {id: 2})">go page2</button>
+  <button (click)="goto('/page3')">go page3</button>
+</div>
+
+<app-comp1 #myChild [propsA]="propsA" (EventA)="setPropsA($event)"></app-comp1>

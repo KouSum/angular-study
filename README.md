@@ -9,3 +9,5 @@
 > `ng generate service service-name`
 > #### 创建路由守卫
 > `ng generate guard can-deactivate`
+> #### 创建pipe管道
+> `ng generate pipe my-pipe`
