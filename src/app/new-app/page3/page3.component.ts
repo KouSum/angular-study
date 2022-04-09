@@ -30,7 +30,10 @@ export class Page3Component implements OnInit {
     this.obs$ = this.of_.pipe(
       // 防抖
       debounceTime(500),
-      switchMap((res:any[])=>this.http.get('api/post')),
+      switchMap((res:any[])=>{
+        console.log('执行了')
+        return this.http.get('api/post')
+      }),
       map((res)=>[JSON.stringify(res)])
     )
 

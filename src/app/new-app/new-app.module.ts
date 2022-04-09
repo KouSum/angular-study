@@ -7,6 +7,8 @@ import { Page2Component } from './page2/page2.component';
 import { Page3Component } from './page3/page3.component';
 import { Comp1Component } from './comp1/comp1.component';
 import { ZippyContentDirective } from './zippy-content.directive';
+import { RxjsTestComponent } from './rxjs-test/rxjs-test.component';
+import { httpInterceptorProviders } from './http-interceptors';
 
 
 @NgModule({
@@ -15,11 +17,14 @@ import { ZippyContentDirective } from './zippy-content.directive';
     Page2Component,
     Page3Component,
     Comp1Component,
-    ZippyContentDirective
+    ZippyContentDirective,
+    RxjsTestComponent
   ],
   imports: [
     CommonModule,
     NewAppRoutingModule
+  ],
+  providers:[
   ]
 })
 export class NewAppModule { }

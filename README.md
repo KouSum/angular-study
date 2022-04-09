@@ -11,3 +11,5 @@
 > `ng generate guard can-deactivate`
 > #### 创建pipe管道
 > `ng generate pipe my-pipe`
+> #### 创建http拦截器
+> `ng generate interceptor my-pipe`

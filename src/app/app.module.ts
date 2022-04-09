@@ -33,6 +33,7 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor.componen
 import {MyPipeModule} from "./my-pipe/my-pipe.module";
 import {NewAppModule} from "./new-app/new-app.module";
 import { ZippyContentDirective } from './new-app/zippy-content.directive';
+import { httpInterceptorProviders } from './new-app/http-interceptors';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,9 @@ import { ZippyContentDirective } from './new-app/zippy-content.directive';
       InMemoryDataService, { dataEncapsulation: false }
     ),
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProviders,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

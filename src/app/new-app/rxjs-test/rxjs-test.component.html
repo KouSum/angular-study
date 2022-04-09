@@ -1,0 +1,23 @@
+<h1>of</h1>
+<div *ngFor="let item of ofData$ | async">
+    <div>{{item}}</div>
+</div>
+<h1>from</h1>
+<button (click)="getData()">get data</button>
+<button (click)="updateSource()">updateSource</button>
+
+<div *ngFor="let item of fromData$ | async">
+    <div>{{item.name}}</div>
+</div>
+
+<h1>fromEvent</h1>
+<button #clickEventButton>click event</button>
+
+
+<h1>Subject</h1>
+<button (click)="getDataSubject()">Subject</button>
+<button *ngIf="subData$" (click)="subscribe()">订阅</button>
+<button *ngIf="canSubscribe" (click)="unSubscribe()">取消订阅</button>
+<div *ngFor="let item of subData$ | async">
+    <div>{{item.name}}</div>
+</div>
