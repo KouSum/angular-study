@@ -32,6 +32,7 @@ import {HeroFormModule} from "./hero-form/hero-form.module";
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import {MyPipeModule} from "./my-pipe/my-pipe.module";
 import {NewAppModule} from "./new-app/new-app.module";
+import { ZippyContentDirective } from './new-app/zippy-content.directive';
 
 @NgModule({
   declarations: [

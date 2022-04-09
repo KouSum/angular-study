@@ -5,4 +5,17 @@
   <button (click)="goto('/page3')">go page3</button>
 </div>
 
-<app-comp1 #myChild [propsA]="propsA" (EventA)="setPropsA($event)"></app-comp1>
+<div class="active">
+  <app-comp1 [(size)]="size" #myChild [propsA]="propsA" (EventA)="setPropsA($event)">
+    <button>default slot</button>
+    <div my-slot>
+      my-slot
+    </div>
+    <ng-template appExampleZippyContent>
+      It depends on what you do with it.
+    </ng-template>
+    <ng-template appExampleZippyContent>
+      22222222
+    </ng-template>
+  </app-comp1>
+</div>

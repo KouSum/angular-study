@@ -1,4 +1,17 @@
 <p>comp1 works!</p>
 <h1>{{propsA}}</h1>
+<h2>双向绑定 属性size: {{size}}</h2>
 
 <button (click)="setPropsA()">set propsA</button>
+<br/>
+<h3>默认插槽</h3>
+<ng-content></ng-content>
+<h3>多个插槽</h3>
+<ng-content select="[my-slot]"></ng-content>
+
+<div *ngIf="expanded" [id]="contentId">
+    <ng-container [ngTemplateOutlet]="content.last.templateRef"></ng-container>
+</div>
+<div *ngFor="let item of content">
+    <ng-container [ngTemplateOutlet]="item.templateRef"></ng-container>
+</div>

@@ -1,0 +1,9 @@
+// :host 表示选择当前的组件。
+:host h1 {
+    font-style: italic;
+}
+
+// :host-context 只有当该组件的某个祖先元素有 CSS 类 active 时，才会把该组件内部的所有文本置为斜体
+:host-context(.active) {
+    color: red;
+}

@@ -1,6 +1,7 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ContentChild, OnInit, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
 import {Comp1Component} from "../comp1/comp1.component";
+import { ZippyContentDirective } from '../zippy-content.directive';
 
 @Component({
   selector: 'app-page1',
@@ -9,6 +10,7 @@ import {Comp1Component} from "../comp1/comp1.component";
 })
 export class Page1Component implements OnInit, AfterViewInit {
 
+  size = 1;
   @ViewChild('myChild') myChildComp: Comp1Component | undefined
   propsA = 'ni hao'
   constructor(private router: Router,) { }
@@ -32,5 +34,7 @@ export class Page1Component implements OnInit, AfterViewInit {
 
   setPropsA(msg:string){
     this.propsA = msg
+    this.size = 2
   }
+
 }
